@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+*{
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+}
+
+@custom-varient dark (&:where(.dark, .dark *))
+
+
+@theme{
+  --color-primary: #5044E5;
+}
