@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import Navbar from './Components/Navbar'
+import Navbar from './Components/Navbar/Navbar'
+import Routing from './Routing/Routing'
 
 
 function App() {
@@ -8,8 +9,11 @@ function App() {
 
   return (
     <>
-     <div className='dark:bg-black relative'>
+     <div className='relative'> {/* {dark:bg-black} */}
      <Navbar theme={theme} setTheme={setTheme} />
+     <main>
+      <Routing/>
+     </main>
      </div>
     </>
   )
