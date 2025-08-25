@@ -1,5 +1,7 @@
 import React from 'react'
 import assets from '../../Assets/assets'
+import TrustedBy from './TrustedBy/TrustedBy'
+import Services from '../Services/Services'
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
         <img src={assets.hero_img} alt="hero" className='w-full max-w-6xl' />
         <img src={assets.bgImage1} alt="background-color" className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden' />
       </div>
+      <TrustedBy />
+      <Services />
     </div>
   )
 }

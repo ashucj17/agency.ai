@@ -28,9 +28,9 @@ const Navbar = ({theme, setTheme}) => {
 
             <img src={theme === 'dark'? assets.menu_icon_dark : assets.menu_icon} alt="menu" onClick={()=> setSideBarOpen(true)} className='w-8 sm:hidden cursor-pointer hover:opacity-70 transition-opacity' /> */}
             
-            <a href="#contact-us" className='text-sm max-sm:hidden flex items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200'>
+            <NavLink to='/contact-us' className='text-sm max-sm:hidden flex items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200'>
                 Connect <img src={assets.arrow_icon} width={14} alt=""/>
-            </a>
+            </NavLink>
         </div>
     </div>
   )
