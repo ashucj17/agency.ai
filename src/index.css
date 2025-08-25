@@ -2,15 +2,7 @@
 
 @import "tailwindcss";
 
-
-*{
+* {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-}
-
-@custom-variant dark (&:where(.dark, .dark *))
-
-
-@theme{
-  --color-primary: #5044E5;
 }
