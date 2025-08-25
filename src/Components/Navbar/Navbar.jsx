@@ -24,9 +24,9 @@ const Navbar = ({theme, setTheme}) => {
         </nav>
 
         <div className='flex items-center gap-2 sm:gap-4'>
-            <ThemeToggleBtn theme={theme} setTheme={setTheme} />
+            {/* <ThemeToggleBtn theme={theme} setTheme={setTheme} />
 
-            <img src={theme === 'dark'? assets.menu_icon_dark : assets.menu_icon} alt="menu" onClick={()=> setSideBarOpen(true)} className='w-8 sm:hidden cursor-pointer hover:opacity-70 transition-opacity' />
+            <img src={theme === 'dark'? assets.menu_icon_dark : assets.menu_icon} alt="menu" onClick={()=> setSideBarOpen(true)} className='w-8 sm:hidden cursor-pointer hover:opacity-70 transition-opacity' /> */}
             
             <a href="#contact-us" className='text-sm max-sm:hidden flex items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200'>
                 Connect <img src={assets.arrow_icon} width={14} alt=""/>
