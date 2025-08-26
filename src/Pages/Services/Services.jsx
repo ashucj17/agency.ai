@@ -3,13 +3,14 @@ import assets from '../../Assets/assets'
 import Title from '../../Components/Services/Title/Title'
 import ServicesGrid from '../../Components/Services/ServicesGrid/ServicesGrid'
 
+
 const Services = () => {
   return (
     <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
       {/* Hero Section */}
       <div className='relative flex flex-col items-center justify-center py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900'>
-        <div className='inline-flex items-center gap-2 border border-gray-300 dark:border-gray-600 p-1.5 pr-4 rounded-full mb-6'>
-          <img className='w-8' src={assets.group_profile} alt="services-icon"/>
+        <div className='inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full'>
+          <img className='w-20' src={assets.group_profile} alt="services-icon"/>
           <p className='text-xs font-medium text-gray-600 dark:text-gray-300'>Professional Services</p>
         </div>
         
@@ -20,12 +21,13 @@ const Services = () => {
         <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-8'>
           Comprehensive digital solutions designed to elevate your business and drive meaningful results in today's competitive landscape.
         </p>
+
       </div>
 
       {/* Services Content */}
       <div className='py-16'>
         <div className='text-center mb-12'>
-          <Title 
+          <Title
             title='What We Offer' 
             description='Explore our comprehensive range of services designed to help your business thrive in the digital world.'
           />
