@@ -2,14 +2,38 @@ import React from 'react'
 import assets from '../../Assets/assets'
 import Title from '../../Components/Services/Title/Title'
 import ServicesGrid from '../../Components/Services/ServicesGrid/ServicesGrid'
-
+import ServiceCard from '../../Components/Services/ServiceCard/ServiceCard'
 
 const Services = () => {
+  // Define services data for ServiceCard (can be different from ServicesGrid)
+  const featuredServicesData = [
+    {
+      title: 'Digital Strategy',
+      description: 'Comprehensive digital transformation strategies that align with your business goals and drive sustainable growth.',
+      icon: assets.ads_icon,
+    },
+    {
+      title: 'UI/UX Design',
+      description: 'User-centered design solutions that create intuitive, engaging, and conversion-focused digital experiences.',
+      icon: assets.content_icon,
+    },
+    {
+      title: 'E-commerce Solutions',
+      description: 'Complete online store development with secure payment integration and inventory management systems.',
+      icon: assets.web_icon,
+    },
+    {
+      title: 'Analytics & Optimization',
+      description: 'Data-driven insights and continuous optimization to maximize your digital performance and ROI.',
+      icon: assets.marketing_icon,
+    }
+  ]
+
   return (
     <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
       {/* Hero Section */}
       <div className='relative flex flex-col items-center justify-center py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900'>
-        <div className='inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full'>
+        <div className='inline-flex items-center gap-2 border border-gray-300 dark:border-gray-600 p-1.5 pr-4 rounded-full'>
           <img className='w-20' src={assets.group_profile} alt="services-icon"/>
           <p className='text-xs font-medium text-gray-600 dark:text-gray-300'>Professional Services</p>
         </div>
@@ -21,11 +45,11 @@ const Services = () => {
         <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-8'>
           Comprehensive digital solutions designed to elevate your business and drive meaningful results in today's competitive landscape.
         </p>
-
       </div>
 
       {/* Services Content */}
       <div className='py-16'>
+        {/* Basic Services Grid */}
         <div className='text-center mb-12'>
           <Title
             title='What We Offer' 
@@ -34,7 +58,23 @@ const Services = () => {
         </div>
         
         <ServicesGrid />
-        
+
+        {/* Featured Services with ServiceCard (only on Services page) */}
+        <div className='mt-20 px-4 sm:px-12 lg:px-24 xl:px-40'>
+          <div className='text-center mb-12'>
+            <Title
+              title='Featured Services' 
+              description='Premium solutions with advanced features and interactive experiences designed for maximum impact.'
+            />
+          </div>
+          
+          <div className='flex flex-wrap justify-center items-center'>
+            {featuredServicesData.map((service, index) => (
+              <ServiceCard key={index} service={service} />
+            ))}
+          </div>
+        </div>
+
         {/* Additional Content Section */}
         <div className='mt-16 py-12 bg-white dark:bg-gray-800'>
           <div className='px-4 sm:px-12 lg:px-24 xl:px-40'>

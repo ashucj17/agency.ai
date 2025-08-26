@@ -1,6 +1,7 @@
 import React from 'react'
 import assets from '../../../Assets/assets'
 
+
 const ServicesGrid = () => {
   const servicesData = [
     {
@@ -16,7 +17,7 @@ const ServicesGrid = () => {
     {
       title: 'Web Development',
       description: 'From design to deployment, we craft responsive, high-performing websites tailored to your needs.',
-      icon: assets.social_icon,
+      icon: assets.web_icon,
     },
     {
       title: 'SEO & Marketing',
