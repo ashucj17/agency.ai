@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../../Components/Services/Title/Title'
+import Title from '../../Components/Title/Title'
 import assets from '../../Assets/assets'
 
 const PageNotFound = () => {

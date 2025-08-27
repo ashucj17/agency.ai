@@ -2,6 +2,7 @@ import React from 'react'
 import assets from '../../Assets/assets'
 import TrustedBy from '../../Components/Home/TrustedBy/TrustedBy'
 import ServicesSection from '../../Components/Services/ServicesSection'
+import OurWork from '../OurWork/OurWork'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       </div>
       <TrustedBy />
       <ServicesSection />
+      <OurWork />
     </div>
   )
 }

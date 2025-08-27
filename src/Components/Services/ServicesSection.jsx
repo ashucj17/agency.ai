@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import assets from '../../Assets/assets'
-import Title from './Title/Title'
+import Title from '../Title/Title'
 import { NavLink } from 'react-router-dom'
 
 const ServicesSection = () => {
