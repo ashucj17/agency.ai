@@ -30,6 +30,7 @@ import menu_icon_dark from './menu_icon_dark.svg'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
 import web_icon from './web_icon.svg'
+import service_hero from './service_hero.png'
 
 
 export const company_logos = [
@@ -65,6 +66,7 @@ const assets = {
   linkedin_icon,
   logo_dark,
   menu_icon_dark,
+  service_hero,
   sun_icon,
   moon_icon,
   web_icon,

@@ -3,7 +3,7 @@ import assets from '../../Assets/assets'
 import Title from '../../Components/Title/Title'
 import ServicesGrid from '../../Components/Services/ServicesGrid/ServicesGrid'
 import ServiceCard from '../../Components/Services/ServiceCard/ServiceCard'
-import heroImage from "../../Assets/service-hero.png"; // ✅ import hero image
+
 
 const Services = () => {
   const featuredServicesData = [
@@ -31,17 +31,14 @@ const Services = () => {
 
   return (
     <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
-      {/* ✅ HERO SECTION with Background Image and Overlay */}
       <div 
         className="relative flex flex-col items-center justify-center px-6 sm:px-12 lg:px-24 xl:px-40 py-20 min-h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${heroImage})`
+          backgroundImage: `url(${assets.service_hero})`
         }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60 dark:bg-black/70"></div>
         
-        {/* Content over overlay */}
         <div className="relative z-10 text-center text-white">
           <div className='inline-flex items-center gap-2 border border-white/30 bg-white/10 backdrop-blur-sm p-1.5 pr-4 rounded-full mb-6'>
             <img className='w-20' src={assets.group_profile} alt="services-icon"/>
