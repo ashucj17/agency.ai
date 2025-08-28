@@ -28,17 +28,14 @@ const Home = () => {
       
       <TrustedBy />
       <ServicesSection />
-      
-      {/* Portfolio section with simple home page design */}
-      <OurWorkPortfolio 
+
+      <OurWorkPortfolio
         title="Our Latest Work"
         description="We create digital solutions from design to deployment that advance your company."
         showAll={false}
         maxItems={3}
-        isHomePage={true} // This ensures simple design for home page
+        isHomePage={true}
       />
-      
-      {/* Single Team component */}
       <Team />
     </div>
   )

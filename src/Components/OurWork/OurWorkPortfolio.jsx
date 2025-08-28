@@ -2,15 +2,15 @@ import React from "react";
 import Title from "../../Components/Title/Title";
 import assets from "../../Assets/assets";
 
-const OurWorkPortfolio = ({ 
-  workData, 
-  title = "Our Latest Work", 
+const OurWorkPortfolio = ({
+  workData,
+  title = "Our Latest Work",
   description = "We create digital solutions from design to deployment that advance your company.",
   showAll = false,
   maxItems = 3,
-  isHomePage = false // New prop to identify home page usage
+  isHomePage = false
 }) => {
-  // Default work data (simple version for home page)
+
   const defaultWorkData = [
     {
       title: "Mobile app development",
@@ -46,12 +46,12 @@ const OurWorkPortfolio = ({
 
   // Use provided workData or default
   const dataToRender = workData || defaultWorkData;
-  
+
   // Limit items if not showing all
   const displayData = showAll ? dataToRender : dataToRender.slice(0, maxItems);
 
   return (
-    <div 
+    <div
       id="our-work"
       className={`flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white ${
         isHomePage ? 'py-8' : 'py-16'
@@ -64,10 +64,10 @@ const OurWorkPortfolio = ({
 
       <div className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full ${isHomePage ? 'max-w-5xl' : 'max-w-6xl'}`}>
         {displayData.map((work, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`group hover:scale-105 duration-500 transition-all cursor-pointer ${
-              isHomePage 
+              isHomePage
                 ? 'bg-transparent' // Simple design for home page
                 : 'bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl'
             }`}
@@ -85,8 +85,8 @@ const OurWorkPortfolio = ({
               // Enhanced design for OurWork page
               <>
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={work.image} 
+                  <img
+                    src={work.image}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" 
                     alt={work.title}
                   />

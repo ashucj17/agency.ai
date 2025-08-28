@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title/Title'
-import { teamData } from '../../Assets/assets'
+import assets, { teamData } from '../../Assets/assets'
+import { NavLink } from 'react-router-dom'
 
 const Team = () => {
   return (
@@ -18,8 +19,11 @@ const Team = () => {
                 </div>
 
             ))}
+            
         </div>
-
+            <NavLink to='/contact-us' className='text-sm max-sm:hidden flex items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200'>
+                Connect Now<img src={assets.arrow_icon} width={14} alt=""/>
+            </NavLink>
     </div>
   )
 }

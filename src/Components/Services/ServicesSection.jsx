@@ -55,7 +55,7 @@ const ServicesSection = () => {
         
         <NavLink 
           to='/services' 
-          className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg group'
+          className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white mt-6 px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg group'
         >
           Learn More 
           <img 
@@ -130,7 +130,7 @@ const ServicesSection = () => {
       </div>
 
       {/* Optional: Add a subtle call-to-action section */}
-      <div className="text-center mt-8 space-y-4">
+      <div className="text-center mt-4 space-y-4">
         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Ready to transform your business with our comprehensive digital solutions? 
         </p>
