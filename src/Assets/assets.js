@@ -35,6 +35,7 @@ import saas_application from './saas_application.png'
 import corporate_website from './corporate_website.png'
 import e_commerce from './e_commerce.png'
 import work_hero from './work_hero.png'
+import contact_hero from './contact_hero.png'
 
 
 export const company_logos = [
@@ -77,7 +78,8 @@ const assets = {
   saas_application,
   corporate_website,
   e_commerce,
-  work_hero
+  work_hero,
+  contact_hero
 }
 
 export default assets

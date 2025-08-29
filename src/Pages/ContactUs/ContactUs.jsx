@@ -1,36 +1,41 @@
 import React from 'react'
 import Title from '../../Components/Title/Title'
 import assets from '../../Assets/assets'
+import ContactInfo from '../../Components/Contact/ContactInfo/ContactInfo'
 
 const ContactUs = () => {
+  // Contact information data
+
   return (
-    <div className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white'>
-      <div className='flex flex-col justify-center'>
-        <Title title={"Reach out to us"} description={'We create digital solutions that advance your company from strategy to execution.'}/>
+    <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+      {/* Hero Section */}
+      <div 
+        className="relative flex flex-col items-center justify-center px-6 sm:px-12 lg:px-24 xl:px-40 py-20 min-h-[50vh] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${assets.contact_hero || assets.hero_img})`
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60 dark:bg-black/70"></div>
+        
+        <div className="relative z-10 text-center text-white">
+          <div className='inline-flex items-center gap-2 border border-white/30 bg-white/10 backdrop-blur-sm p-1.5 pr-4 rounded-full mb-6'>
+            <img className='w-20' src={assets.group_profile} alt="contact-icon"/>
+            <p className='text-xs font-medium text-white/90'>Get In Touch</p>
+          </div>
+
+          <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white'>
+            Contact <span className='bg-gradient-to-r from-[#5044e5] to-[#4d8cea] bg-clip-text text-transparent'>Us</span>
+          </h1>
+          
+          <p className='text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed'>
+            Ready to transform your ideas into digital reality? Let's start a conversation about your next project.
+          </p>
+        </div>
+
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-50 dark:from-gray-900 to-transparent"></div>
       </div>
-      <form className='grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full' action="">
-        <div>
-          <label className='block mb-2 text-sm font-medium text-left' >Your name</label>
-            <div className='flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600'>
-              <img src={assets.person_icon} alt="person icon"/>
-              <input type="text" placeholder='Enter your name' className='w-full p-3 text-sm outline-none' required/>
-            </div>
-        </div>
-        <div>
-          <label className='block mb-2 text-sm font-medium text-left' >Email id</label>
-            <div className='flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600'>
-              <img src={assets.email_icon} alt="person icon"/>
-              <input type="email" placeholder='Enter your email' className='w-full p-3 text-sm outline-none' required />
-            </div>
-        </div>
-        <div className='sm:col-span-2'>
-          <label className='block mb-2 text-sm font-medium text-left' >Message</label>
-          <textarea rows={8} placeholder='Enter your message'className='w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600'/>
-        </div>
-        <button type='submit' className='w-max flex gap-2 bg-blue-600 text-white text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-105 transition-all'>
-        Submit <img src={assets.arrow_icon} alt="submit-arrow" className='w-4' />
-        </button>
-      </form>
+
+     <ContactInfo />
     </div>
   )
 }
