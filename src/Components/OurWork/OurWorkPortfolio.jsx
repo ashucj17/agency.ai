@@ -30,17 +30,17 @@ const OurWorkPortfolio = ({
     {
       title: "E-commerce Platform",
       description: "Complete online store solutions with secure payment integration, inventory management, and seamless user experience.",
-      image: assets.work_mobile_app,
+      image: assets.e_commerce,
     },
     {
       title: "Corporate Website",
       description: "Professional corporate websites that establish strong brand presence and drive business growth.",
-      image: assets.work_dashboard_management,
+      image: assets.corporate_website,
     },
     {
       title: "SaaS Application",
       description: "Scalable software-as-a-service applications built with modern technologies to solve complex business challenges.",
-      image: assets.work_fitness_app,
+      image: assets.saas_application,
     }
   ];
 
@@ -68,7 +68,7 @@ const OurWorkPortfolio = ({
             key={index}
             className={`group hover:scale-105 duration-500 transition-all cursor-pointer ${
               isHomePage
-                ? 'bg-transparent' // Simple design for home page
+                ? 'bg-transparent'
                 : 'bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl'
             }`}
           >

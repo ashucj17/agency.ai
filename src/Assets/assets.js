@@ -31,6 +31,10 @@ import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
 import web_icon from './web_icon.svg'
 import service_hero from './service_hero.png'
+import saas_application from './saas_application.png'
+import corporate_website from './corporate_website.png'
+import e_commerce from './e_commerce.png'
+import work_hero from './work_hero.png'
 
 
 export const company_logos = [
@@ -70,6 +74,10 @@ const assets = {
   sun_icon,
   moon_icon,
   web_icon,
+  saas_application,
+  corporate_website,
+  e_commerce,
+  work_hero
 }
 
 export default assets

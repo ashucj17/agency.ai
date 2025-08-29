@@ -27,25 +27,24 @@ const OurWork = () => {
     {
       title: "E-commerce Platform",
       description: "Complete online store solutions with secure payment integration, inventory management, and seamless user experience.",
-      image: assets.work_mobile_app, // Replace with actual e-commerce image
+      image: assets.e_commerce,
       category: "E-commerce"
     },
     {
       title: "Corporate Website",
       description: "Professional corporate websites that establish strong brand presence and drive business growth through effective digital marketing.",
-      image: assets.work_dashboard_management, // Replace with actual corporate image
+      image: assets.corporate_website,
       category: "Web Design"
     },
     {
       title: "SaaS Application",
       description: "Scalable software-as-a-service applications built with modern technologies to solve complex business challenges efficiently.",
-      image: assets.work_fitness_app, // Replace with actual SaaS image
+      image: assets.saas_application,
       category: "SaaS Development"
     }
   ];
 
-  // Featured projects for the bottom section
-  const featuredWork = [
+    const featuredWork = [
     {
       title: "Award-Winning Mobile App",
       description: "Revolutionary fitness tracking app that won the 2024 Best Mobile Innovation Award.",
@@ -74,8 +73,7 @@ const OurWork = () => {
 
   return (
     <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
-      {/* Hero Section with Background Image and Overlay */}
-      <div 
+      <div
         className="relative flex flex-col items-center justify-center px-6 sm:px-12 lg:px-24 xl:px-40 py-20 min-h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${assets.work_hero || assets.hero_img})` // Use work_hero if available, fallback to hero_img
