@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import Routing from './Routing/Routing'
+import { Toaster } from 'react-hot-toast';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -18,10 +20,12 @@ const [theme, setTheme] = useState(() => {
   return (
     <>
      <div className='dark:bg-black relative'>
+     <Toaster />
      <Navbar theme={theme} setTheme={setTheme} />
      <main>
       <Routing/>
      </main>
+     <Footer theme={theme} setTheme={setTheme}/>
      </div>
     </>
   )

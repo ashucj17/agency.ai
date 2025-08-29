@@ -3,6 +3,7 @@ import assets from "../../../Assets/assets";
 import Title from "../../Title/Title";
 import Faq from "../FAQ/Faq";
 import { NavLink } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const ContactInfo = () => {
   const contactInfo = [
@@ -43,6 +44,31 @@ const ContactInfo = () => {
       iconColor: "text-purple-600 dark:text-purple-300",
     },
   ];
+
+ const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "3e544db7-ff95-4e1a-b393-03740497a32f");
+
+    try{
+        const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success('Thank you for the submission')
+      event.target.reset()
+    } else {
+      toast.error(res.message)
+    }
+    }catch{
+        toast.error(error.message)
+    }
+
+   
+  };
   return (
     <>
       <div className="py-16">
@@ -88,10 +114,10 @@ const ContactInfo = () => {
                 Send us a Message
               </h2>
 
-              <form className="grid gap-4" action="">
+              <form onSubmit={onSubmit} className="grid gap-4" action="">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block mb-2 text-sm font-medium text-left text-gray-700 dark:text-gray-300">
+                    <label name="name" className="block mb-2 text-sm font-medium text-left text-gray-700 dark:text-gray-300">
                       Your name
                     </label>
                     <div className="flex items-center pl-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700">
@@ -110,7 +136,7 @@ const ContactInfo = () => {
                   </div>
 
                   <div>
-                    <label className="block mb-2 text-sm font-medium text-left text-gray-700 dark:text-gray-300">
+                    <label name="email" className="block mb-2 text-sm font-medium text-left text-gray-700 dark:text-gray-300">
                       Email address
                     </label>
                     <div className="flex items-center pl-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700">
@@ -130,7 +156,7 @@ const ContactInfo = () => {
                 </div>
 
                 <div>
-                  <label className="block mb-2 text-sm font-medium text-left text-gray-700 dark:text-gray-300">
+                  <label name="phone" className="block mb-2 text-sm font-medium text-left text-gray-700 dark:text-gray-300">
                     Phone number
                   </label>
                   <div className="flex items-center pl-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700">
