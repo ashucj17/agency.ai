@@ -6,6 +6,7 @@
   "homepage": "https://ashucj17.github.io/agency.ai/",
   "scripts": {
     "dev": "vite",
+    "clean": "rimraf dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -32,6 +33,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4.1.12",
     "vite": "^7.1.2"
   }
