@@ -14,14 +14,23 @@
 
   gtag('config', 'AW-18189879899');
 </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18189879899"></script>
+<!-- Event snippet for Click to call (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18189879899');
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18189879899/-CDrCNvJ8rQcENuUzuFD',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
     <script type="module" crossorigin src="/agency.ai/assets/index-Du5VNNKp.js"></script>
     <link rel="stylesheet" crossorigin href="/agency.ai/assets/index-DWCKp_jZ.css">
