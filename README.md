@@ -1,12 +1,19 @@
-# React + Vite
+The most recent articles, news, and resource #Agency.AI 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ GitHub Pages has a React + Vite project live at 👉 [https://ashucj17.github.io/agency.ai/]. (https://agency.ai/ashucj17.github.io)
 
-Currently, two official plugins are available:
+ ---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ## Tech Stack 🛠
+ [React] This link: https://react.dev/
+ The URL is https://vitejs.dev/.
+ The URL is https://tailwindcss.com/.
+ Pages on GitHub for deployment
 
-## Expanding the ESLint configuration
+ ---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ ## ⚙️ Setup
+
+ Install requirements and clone the repository:
+
+ Every week, ```bash git clone https://github.com/ashucj17/agency.ai.git cd agency.ai npm installs are delivered to your inbox.
